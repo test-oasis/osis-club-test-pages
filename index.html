@@ -58,13 +58,25 @@ td:last-child,th:last-child{text-align:right}
 .btn.sec{background:transparent;border:2px solid #fff;color:#fff;padding:12px 24px}
 .botones{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .btn.sec:hover{background:#fff;color:var(--noche)}
+.reservar{background:var(--bola)}
+.reservar p{max-width:40ch;margin-bottom:22px}
+.reservar .btn{background:var(--noche);color:#fff}
+.reservar .btn:hover{background:var(--agua)}
+.resenas{background:#f8f1df}
+.opiniones{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin-bottom:28px}
+.opiniones blockquote{border-left:6px solid var(--bola);background:#fff;padding:16px 18px;border-radius:0 6px 6px 0}
+.estrellas{color:#e0a800;letter-spacing:2px;font-size:1.1rem}
+.opiniones cite{display:block;margin-top:10px;font-style:normal;font-weight:500}
+.resenas .btn{background:var(--noche);color:#fff}
+.resenas .btn.sec{background:transparent;border:2px solid var(--noche);color:var(--noche)}
+.resenas .btn.sec:hover{background:var(--noche);color:#fff}
 footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);color:var(--arena)}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
 <a class="logo" href="#"><img src="logo.svg" alt="" width="38" height="38">Oasis</a>
-<div><a href="#pistas">Pistas</a><a href="#galeria">Galería</a><a href="#tarifas">Tarifas</a><a href="#contacto">Ubicación</a></div>
+<div><a href="#pistas">Pistas</a><a href="#reservar">Reservar</a><a href="#resenas">Reseñas</a><a href="#contacto">Ubicación</a></div>
 </nav></div></header>
 
 <div class="hero">
@@ -75,7 +87,7 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <div class="wrap">
 <h1>Pádel en tu Oasis</h1>
 <p>Pistas cubiertas, clases para todos los niveles y un bar donde seguir el partido.</p>
-<a class="btn" href="#contacto">Reservar pista</a>
+<a class="btn" href="#reservar">Reservar pista</a>
 </div>
 <div class="bola" aria-hidden="true"></div>
 </div>
@@ -98,6 +110,12 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <img src="img/torneo.jpg" alt="Torneo del club" onerror="this.onerror=null;this.src='img/placeholder.svg'">
 </div></div></section>
 
+<section id="reservar" class="reservar"><div class="wrap">
+<h2>Reserva tu pista online</h2>
+<p>Elige día y hora, y paga con la app de Playtomic. Confirmación al instante.</p>
+<a class="btn" href="https://playtomic.io/" target="_blank" rel="noopener">Reservar en Playtomic</a>
+</div></section>
+
 <section id="tarifas" class="tarifas"><div class="wrap">
 <h2>Tarifas por pista</h2>
 <div class="tabla"><table>
@@ -116,6 +134,20 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <div><h3>Torneos</h3><p>Cada mes, una liga o torneo por categorías con premios.</p></div>
 <div><h3>Escuela infantil</h3><p>Sábados por la mañana, desde 6 años.</p></div>
 </div></div></section>
+
+<section id="resenas" class="resenas"><div class="wrap">
+<h2>Lo que dicen de Oasis</h2>
+<div class="opiniones">
+<!-- Sustituye estas tres reseñas por reseñas reales de Google (con permiso del autor) -->
+<blockquote><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Aquí irá el texto de una reseña real de un cliente.</p><cite>Nombre del cliente</cite></blockquote>
+<blockquote><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Aquí irá el texto de una reseña real de un cliente.</p><cite>Nombre del cliente</cite></blockquote>
+<blockquote><div class="estrellas" aria-label="5 estrellas">★★★★★</div><p>Aquí irá el texto de una reseña real de un cliente.</p><cite>Nombre del cliente</cite></blockquote>
+</div>
+<div class="botones">
+<a class="btn" href="https://www.google.com/maps/search/?api=1&query=Oasis+Padel+Club+Puertollano" target="_blank" rel="noopener">Ver todas en Google</a>
+<a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Oasis+Padel+Club+Puertollano" target="_blank" rel="noopener">Escribir una reseña</a>
+</div>
+</div></section>
 
 <section id="contacto" class="contacto"><div class="wrap">
 <h2>Reserva tu pista</h2>
