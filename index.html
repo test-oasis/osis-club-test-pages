@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oasis Pádel Club</title>
+<meta name="description" content="Oasis Pádel Club: reserva pista, clases y torneos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--agua:#0d5c63;--noche:#08302f;--arena:#f1e6cc;--bola:#d8ea3f;--linea:#ffffff;
+--display:'Bricolage Grotesque',system-ui,sans-serif;--texto:'DM Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.6 var(--texto);background:var(--arena);color:var(--noche)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--bola);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+header{position:absolute;inset:0 0 auto 0;z-index:2}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font:800 1.4rem var(--display);color:#fff;text-decoration:none}
+nav a:not(.logo){color:#fff;text-decoration:none;margin-left:18px;font-weight:500}
+.hero{background:var(--agua);color:#fff;position:relative;overflow:hidden;padding:130px 0 90px}
+.hero svg{position:absolute;inset:0;width:100%;height:100%;opacity:.28}
+.hero .wrap{position:relative}
+h1{font:800 clamp(3rem,13vw,7rem)/.92 var(--display);letter-spacing:-.03em;max-width:9ch}
+.hero p{max-width:30ch;font-size:1.2rem;margin:22px 0 30px}
+.btn{display:inline-block;background:var(--bola);color:var(--noche);font-weight:500;padding:14px 26px;border-radius:999px;text-decoration:none}
+.btn:hover{background:#fff}
+.bola{position:absolute;right:8%;bottom:48px;width:54px;height:54px;border-radius:50%;background:var(--bola);animation:bote 1.6s ease-in infinite alternate}
+@keyframes bote{from{transform:translateY(-70px)}to{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.bola{animation:none}}
+section{padding:70px 0}
+h2{font:800 clamp(1.9rem,6vw,2.8rem)/1.05 var(--display);margin-bottom:28px;letter-spacing:-.02em}
+.pistas{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.pistas div{border-left:6px solid var(--agua);padding:4px 0 4px 16px}
+.pistas h3{font:800 1.3rem var(--display)}
+.tarifas{background:var(--noche);color:var(--arena)}
+table{width:100%;border-collapse:collapse}
+td,th{padding:14px 8px;text-align:left;border-bottom:1px solid rgba(241,230,204,.25)}
+th{font-weight:500;opacity:.7}
+td:last-child,th:last-child{text-align:right}
+.tabla{overflow-x:auto}
+.nota{margin-top:16px;opacity:.7;font-size:.95rem}
+.clases{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.clases p{max-width:36ch}
+.contacto{background:var(--agua);color:#fff}
+.contacto p{margin-bottom:8px}
+footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);color:var(--arena)}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#">Oasis</a>
+<div><a href="#pistas">Pistas</a><a href="#tarifas">Tarifas</a><a href="#clases">Clases</a><a href="#contacto">Contacto</a></div>
+</nav></div></header>
+
+<div class="hero">
+<svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#fff" stroke-width="3" aria-hidden="true">
+<rect x="60" y="40" width="680" height="420"/><line x1="400" y1="40" x2="400" y2="460" stroke-width="6"/>
+<line x1="230" y1="40" x2="230" y2="460"/><line x1="570" y1="40" x2="570" y2="460"/>
+<line x1="230" y1="250" x2="570" y2="250"/></svg>
+<div class="wrap">
+<h1>Pádel en tu Oasis</h1>
+<p>Pistas cubiertas, clases para todos los niveles y un bar donde seguir el partido.</p>
+<a class="btn" href="#contacto">Reservar pista</a>
+</div>
+<div class="bola" aria-hidden="true"></div>
+</div>
+
+<section id="pistas"><div class="wrap">
+<h2>Nuestras pistas</h2>
+<div class="pistas">
+<div><h3>6 pistas cubiertas</h3><p>Cristal panorámico e iluminación LED, para jugar con cualquier tiempo.</p></div>
+<div><h3>2 pistas exteriores</h3><p>Césped de última generación y sol de tarde.</p></div>
+<div><h3>Vestuarios y bar</h3><p>Duchas, taquillas y terraza para después del partido.</p></div>
+</div></div></section>
+
+<section id="tarifas" class="tarifas"><div class="wrap">
+<h2>Tarifas por pista</h2>
+<div class="tabla"><table>
+<tr><th>Franja</th><th>Horario</th><th>90 min</th></tr>
+<tr><td>Mañana</td><td>9:00 – 14:00</td><td>16 €</td></tr>
+<tr><td>Tarde</td><td>14:00 – 18:00</td><td>20 €</td></tr>
+<tr><td>Hora punta</td><td>18:00 – 22:00</td><td>26 €</td></tr>
+</table></div>
+<p class="nota">Precios de ejemplo: cámbialos por los reales del club.</p>
+</div></section>
+
+<section id="clases"><div class="wrap">
+<h2>Aprende y compite</h2>
+<div class="clases">
+<div><h3>Clases</h3><p>Iniciación, intermedio y avanzado. Grupos de 4 con entrenador titulado.</p></div>
+<div><h3>Torneos</h3><p>Cada mes, una liga o torneo por categorías con premios.</p></div>
+<div><h3>Escuela infantil</h3><p>Sábados por la mañana, desde 6 años.</p></div>
+</div></div></section>
+
+<section id="contacto" class="contacto"><div class="wrap">
+<h2>Reserva tu pista</h2>
+<p>Calle Ejemplo 12, tu ciudad</p>
+<p>Abierto todos los días, de 9:00 a 23:00</p>
+<p>Teléfono: 600 000 000</p>
+<p style="margin-top:22px"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a></p>
+</div></section>
+
+<footer>© 2026 Oasis Pádel Club</footer>
+</body>
+</html>
