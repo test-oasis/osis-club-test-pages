@@ -21,7 +21,9 @@ a{color:inherit}
 header{position:absolute;inset:0 0 auto 0;z-index:2}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
 .logo{font:800 1.4rem var(--display);color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
-nav a:not(.logo){color:#fff;text-decoration:none;margin-left:18px;font-weight:500}
+nav div{display:flex;gap:18px}
+nav a:not(.logo){color:#fff;text-decoration:none;font-weight:500;white-space:nowrap}
+@media(max-width:480px){.wrap{padding:0 16px}.logo{font-size:1.2rem;gap:8px}.logo img{width:30px;height:30px}nav div{gap:12px}nav a:not(.logo){font-size:.88rem}}
 .hero{background:var(--agua);color:#fff;position:relative;overflow:hidden;padding:130px 0 90px}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;opacity:.28}
 .hero .wrap{position:relative}
@@ -53,7 +55,8 @@ td:last-child,th:last-child{text-align:right}
 .galeria img:first-child{grid-column:1/-1;aspect-ratio:16/9}
 @media(min-width:700px){.galeria{grid-template-columns:repeat(3,1fr)}.galeria img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}}
 .mapa{width:100%;height:320px;border:0;border-radius:6px;margin-top:26px}
-.btn.sec{background:transparent;border:2px solid #fff;color:#fff;margin-left:8px}
+.btn.sec{background:transparent;border:2px solid #fff;color:#fff;padding:12px 24px}
+.botones{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .btn.sec:hover{background:#fff;color:var(--noche)}
 footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);color:var(--arena)}
 </style>
@@ -61,7 +64,7 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <body>
 <header><div class="wrap"><nav>
 <a class="logo" href="#"><img src="logo.svg" alt="" width="38" height="38">Oasis</a>
-<div><a href="#pistas">Pistas</a><a href="#galeria">Galería</a><a href="#tarifas">Tarifas</a><a href="#contacto">Dónde estamos</a></div>
+<div><a href="#pistas">Pistas</a><a href="#galeria">Galería</a><a href="#tarifas">Tarifas</a><a href="#contacto">Ubicación</a></div>
 </nav></div></header>
 
 <div class="hero">
@@ -119,8 +122,8 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <p>Calle Malagón, Puertollano (Ciudad Real)</p>
 <p>Abierto todos los días, de 9:00 a 23:00</p>
 <p>Teléfono: 600 000 000</p>
-<p style="margin-top:22px"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a>
-<a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Calle+Malag%C3%B3n+Puertollano">Cómo llegar</a></p>
+<div class="botones"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a>
+<a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Calle+Malag%C3%B3n+Puertollano">Cómo llegar</a></div>
 <iframe class="mapa" title="Mapa de Oasis Pádel Club" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+Malag%C3%B3n,+Puertollano&output=embed"></iframe>
 </div></section>
 
