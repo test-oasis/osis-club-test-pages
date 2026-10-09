@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <title>Oasis Pádel Club</title>
 <meta name="description" content="Oasis Pádel Club: reserva pista, clases y torneos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,7 @@ a{color:inherit}
 .wrap{max-width:960px;margin:0 auto;padding:0 22px}
 header{position:absolute;inset:0 0 auto 0;z-index:2}
 nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font:800 1.4rem var(--display);color:#fff;text-decoration:none}
+.logo{font:800 1.4rem var(--display);color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
 nav a:not(.logo){color:#fff;text-decoration:none;margin-left:18px;font-weight:500}
 .hero{background:var(--agua);color:#fff;position:relative;overflow:hidden;padding:130px 0 90px}
 .hero svg{position:absolute;inset:0;width:100%;height:100%;opacity:.28}
@@ -47,13 +48,20 @@ td:last-child,th:last-child{text-align:right}
 .clases p{max-width:36ch}
 .contacto{background:var(--agua);color:#fff}
 .contacto p{margin-bottom:8px}
+.galeria{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+.galeria img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;background:var(--agua)}
+.galeria img:first-child{grid-column:1/-1;aspect-ratio:16/9}
+@media(min-width:700px){.galeria{grid-template-columns:repeat(3,1fr)}.galeria img:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}}
+.mapa{width:100%;height:320px;border:0;border-radius:6px;margin-top:26px}
+.btn.sec{background:transparent;border:2px solid #fff;color:#fff;margin-left:8px}
+.btn.sec:hover{background:#fff;color:var(--noche)}
 footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);color:var(--arena)}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
-<a class="logo" href="#">Oasis</a>
-<div><a href="#pistas">Pistas</a><a href="#tarifas">Tarifas</a><a href="#clases">Clases</a><a href="#contacto">Contacto</a></div>
+<a class="logo" href="#"><img src="logo.svg" alt="" width="38" height="38">Oasis</a>
+<div><a href="#pistas">Pistas</a><a href="#galeria">Galería</a><a href="#tarifas">Tarifas</a><a href="#contacto">Dónde estamos</a></div>
 </nav></div></header>
 
 <div class="hero">
@@ -77,6 +85,16 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <div><h3>Vestuarios y bar</h3><p>Duchas, taquillas y terraza para después del partido.</p></div>
 </div></div></section>
 
+<section id="galeria"><div class="wrap">
+<h2>El club por dentro</h2>
+<div class="galeria">
+<img src="img/pista1.jpg" alt="Pista cubierta de Oasis" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+<img src="img/pista2.jpg" alt="Pista exterior" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+<img src="img/bar.jpg" alt="Bar y terraza" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+<img src="img/clase.jpg" alt="Clase de pádel" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+<img src="img/torneo.jpg" alt="Torneo del club" onerror="this.onerror=null;this.src='img/placeholder.svg'">
+</div></div></section>
+
 <section id="tarifas" class="tarifas"><div class="wrap">
 <h2>Tarifas por pista</h2>
 <div class="tabla"><table>
@@ -98,10 +116,12 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 
 <section id="contacto" class="contacto"><div class="wrap">
 <h2>Reserva tu pista</h2>
-<p>Calle Ejemplo 12, tu ciudad</p>
+<p>Calle Malagón, Puertollano (Ciudad Real)</p>
 <p>Abierto todos los días, de 9:00 a 23:00</p>
 <p>Teléfono: 600 000 000</p>
-<p style="margin-top:22px"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a></p>
+<p style="margin-top:22px"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a>
+<a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Calle+Malag%C3%B3n+Puertollano">Cómo llegar</a></p>
+<iframe class="mapa" title="Mapa de Oasis Pádel Club" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+Malag%C3%B3n,+Puertollano&output=embed"></iframe>
 </div></section>
 
 <footer>© 2026 Oasis Pádel Club</footer>
