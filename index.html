@@ -70,13 +70,23 @@ td:last-child,th:last-child{text-align:right}
 .resenas .btn{background:var(--noche);color:#fff}
 .resenas .btn.sec{background:transparent;border:2px solid var(--noche);color:var(--noche)}
 .resenas .btn.sec:hover{background:var(--noche);color:#fff}
+.torneos{background:var(--agua);color:#fff}
+.fecha{font:800 clamp(2.4rem,10vw,4.6rem)/1 var(--display);color:var(--bola);letter-spacing:-.02em}
+.torneos .sub{margin:8px 0 28px;font-size:1.1rem;max-width:40ch}
+.torneos form{display:grid;gap:14px;max-width:520px}
+.torneos label{display:grid;gap:5px;font-weight:500;font-size:.95rem}
+.torneos input,.torneos select{font:inherit;padding:12px 14px;border:0;border-radius:6px;background:#fff;color:var(--noche);width:100%}
+.torneos button{font:inherit;font-weight:500;border:0;cursor:pointer;justify-self:start}
+.ig{display:inline-flex;align-items:center;gap:8px}
+.ig svg{width:20px;height:20px}
+footer a{margin-left:10px}
 footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);color:var(--arena)}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
 <a class="logo" href="#"><img src="logo.svg" alt="" width="38" height="38">Oasis</a>
-<div><a href="#pistas">Pistas</a><a href="#reservar">Reservar</a><a href="#resenas">Reseñas</a><a href="#contacto">Ubicación</a></div>
+<div><a href="#pistas">Pistas</a><a href="#reservar">Reservar</a><a href="#torneos">Torneos</a><a href="#contacto">Ubicación</a></div>
 </nav></div></header>
 
 <div class="hero">
@@ -135,6 +145,20 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <div><h3>Escuela infantil</h3><p>Sábados por la mañana, desde 6 años.</p></div>
 </div></div></section>
 
+<section id="torneos" class="torneos"><div class="wrap">
+<h2>Próximo torneo</h2>
+<div class="fecha">15 y 16 de mayo de 2027</div>
+<p class="sub">Torneo por parejas en categorías masculina, femenina y mixta. Plazas limitadas: inscríbete ya.</p>
+<form id="inscripcion">
+<label>Jugador/a 1<input name="j1" required autocomplete="name"></label>
+<label>Jugador/a 2<input name="j2" required></label>
+<label>Teléfono de contacto<input name="tel" type="tel" required autocomplete="tel"></label>
+<label>Categoría<select name="cat"><option>Masculina</option><option>Femenina</option><option>Mixta</option></select></label>
+<label>Nivel<select name="nivel"><option>Iniciación</option><option>Intermedio</option><option>Avanzado</option></select></label>
+<button class="btn" type="submit">Inscribirme por WhatsApp</button>
+</form>
+</div></section>
+
 <section id="resenas" class="resenas"><div class="wrap">
 <h2>Lo que dicen de Oasis</h2>
 <div class="opiniones">
@@ -155,10 +179,18 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <p>Abierto todos los días, de 9:00 a 23:00</p>
 <p>Teléfono: 600 000 000</p>
 <div class="botones"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a>
-<a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Calle+Malag%C3%B3n+Puertollano">Cómo llegar</a></div>
+<a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Calle+Malag%C3%B3n+Puertollano">Cómo llegar</a>
+<a class="btn sec ig" href="https://www.instagram.com/belapadelcenter/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@belapadelcenter</a></div>
 <iframe class="mapa" title="Mapa de Oasis Pádel Club" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+Malag%C3%B3n,+Puertollano&output=embed"></iframe>
 </div></section>
 
-<footer>© 2026 Oasis Pádel Club</footer>
+<footer>© 2026 Oasis Pádel Club <a href="https://www.instagram.com/belapadelcenter/" target="_blank" rel="noopener">Instagram</a></footer>
+<script>
+document.getElementById('inscripcion').addEventListener('submit',function(e){
+e.preventDefault();var f=new FormData(this);
+var t='Inscripción torneo Oasis (15-16 mayo 2027)\nJugador 1: '+f.get('j1')+'\nJugador 2: '+f.get('j2')+'\nTeléfono: '+f.get('tel')+'\nCategoría: '+f.get('cat')+'\nNivel: '+f.get('nivel');
+window.open('https://wa.me/34600000000?text='+encodeURIComponent(t),'_blank');
+});
+</script>
 </body>
 </html>
