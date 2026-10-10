@@ -4,8 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-<title>Oasis Pádel Club</title>
-<meta name="description" content="Oasis Pádel Club: reserva pista, clases y torneos.">
+<title>Oasis Pádel Club | Pádel en Puertollano</title>
+<meta name="description" content="Club de pádel en Puertollano: reserva de pistas con Playtomic, clases, torneos, ligas y bonos. Oasis Pádel Club.">
+<meta property="og:title" content="Oasis Pádel Club | Pádel en Puertollano">
+<meta property="og:description" content="Reserva pista, clases y torneos en Oasis Pádel Club, Puertollano.">
+<meta property="og:image" content="logo.svg">
+<meta property="og:type" content="website">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"Oasis Pádel Club","description":"Club de pádel en Puertollano","address":{"@type":"PostalAddress","streetAddress":"Calle Malagón","addressLocality":"Puertollano","addressRegion":"Ciudad Real","addressCountry":"ES"},"telephone":"+34600000000","openingHours":"Mo-Su 09:00-23:00","sport":"Pádel"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -80,6 +85,27 @@ td:last-child,th:last-child{text-align:right}
 .ig{display:inline-flex;align-items:center;gap:8px}
 .ig svg{width:20px;height:20px}
 footer a{margin-left:10px}
+.flota{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;background:#25d366;color:#08302f;font-weight:500;padding:13px 20px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.estado{display:inline-block;font-weight:500;padding:3px 12px;border-radius:999px;background:#fff;color:var(--noche)}
+.estado.si::before,.estado.no::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.estado.si::before{background:#1fa84f}.estado.no::before{background:#c0392b}
+.precio{font:800 1.6rem var(--display);color:var(--agua)}
+.bloque{margin-bottom:44px}
+.rank th,.rank td{border-color:rgba(8,48,47,.2)}
+.rank td:first-child,.rank th:first-child{width:2.2em}
+.faq details{border-bottom:1px solid rgba(8,48,47,.25);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:500}
+.faq details p{margin-top:8px;max-width:60ch}
+.equipo img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;margin-bottom:8px;background:var(--agua)}
+.logos{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.logos div{border:2px dashed rgba(8,48,47,.3);border-radius:6px;padding:24px 8px;text-align:center;opacity:.7}
+.ig3{display:grid;gap:8px;grid-template-columns:repeat(3,1fr);margin-bottom:22px}
+.ig3 img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;display:block;background:var(--agua)}
+.torneos .galeria{margin-top:40px}
+.cookies{position:fixed;left:0;right:0;bottom:0;z-index:6;background:var(--noche);color:#fff;padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));font-size:.9rem;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.cookies[hidden]{display:none}
+.cookies button{font:inherit;border:0;border-radius:999px;padding:8px 18px;background:var(--bola);cursor:pointer}
+.pie{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;margin-bottom:12px}
 footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);color:var(--arena)}
 </style>
 </head>
@@ -137,12 +163,31 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <p class="nota">Precios de ejemplo: cámbialos por los reales del club.</p>
 </div></section>
 
+<section id="socios"><div class="wrap">
+<h2>Hazte socio</h2>
+<div class="clases bloque">
+<div><div class="precio">25 €/mes</div><h3>Cuota de socio</h3><p>Pistas más baratas, reserva prioritaria y descuento en torneos.</p></div>
+<div><div class="precio">60 €</div><h3>Bono 10 partidos</h3><p>Válido 6 meses, para cualquier franja horaria.</p></div>
+<div><div class="precio">40 €</div><h3>Bono 4 clases</h3><p>Clases en grupo de nivel, con entrenador titulado.</p></div>
+</div>
+<p class="bloque"><a class="btn" style="background:var(--noche);color:#fff" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20informaci%C3%B3n%20para%20hacerme%20socio" target="_blank" rel="noopener">Solicitar por WhatsApp</a></p>
+<h2>Material</h2>
+<div class="clases"><div><div class="precio">3 €</div><h3>Alquiler de pala</h3></div><div><div class="precio">4 €</div><h3>Bote de pelotas</h3></div><div><h3>Venta de material</h3><p>Palas, grips y overgrips. Pregunta en recepción.</p></div></div>
+<p class="nota">Precios de ejemplo: cámbialos por los reales.</p>
+</div></section>
+
 <section id="clases"><div class="wrap">
 <h2>Aprende y compite</h2>
 <div class="clases">
 <div><h3>Clases</h3><p>Iniciación, intermedio y avanzado. Grupos de 4 con entrenador titulado.</p></div>
 <div><h3>Torneos</h3><p>Cada mes, una liga o torneo por categorías con premios.</p></div>
 <div><h3>Escuela infantil</h3><p>Sábados por la mañana, desde 6 años.</p></div>
+</div>
+<h2 style="margin-top:50px">Entrenadores</h2>
+<div class="clases equipo">
+<div><img src="img/entrenador1.jpg" alt="Entrenador 1" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><h3>Nombre Apellido</h3><p>Entrenador titulado. Nivel iniciación y escuela.</p></div>
+<div><img src="img/entrenador2.jpg" alt="Entrenador 2" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><h3>Nombre Apellido</h3><p>Entrenador titulado. Nivel intermedio y avanzado.</p></div>
+<div><img src="img/entrenador3.jpg" alt="Entrenadora 3" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><h3>Nombre Apellido</h3><p>Entrenadora titulada. Clases y preparación física.</p></div>
 </div></div></section>
 
 <section id="torneos" class="torneos"><div class="wrap">
@@ -157,6 +202,21 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <label>Nivel<select name="nivel"><option>Iniciación</option><option>Intermedio</option><option>Avanzado</option></select></label>
 <button class="btn" type="submit">Inscribirme por WhatsApp</button>
 </form>
+<div class="galeria" aria-label="Fotos del torneo anterior"><img src="img/torneo1.jpg" alt="Torneo anterior" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><img src="img/torneo2.jpg" alt="Torneo anterior" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><img src="img/torneo3.jpg" alt="Torneo anterior" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"></div>
+</div></section>
+
+<section id="ranking" class="resenas"><div class="wrap">
+<h2>Ranking de la liga</h2>
+<!-- Edita esta tabla con los resultados reales de la liga -->
+<div class="tabla"><table class="rank">
+<tr><th>#</th><th>Pareja</th><th>Puntos</th></tr>
+<tr><td>1</td><td>Pareja de ejemplo 1</td><td>120</td></tr>
+<tr><td>2</td><td>Pareja de ejemplo 2</td><td>105</td></tr>
+<tr><td>3</td><td>Pareja de ejemplo 3</td><td>98</td></tr>
+<tr><td>4</td><td>Pareja de ejemplo 4</td><td>87</td></tr>
+<tr><td>5</td><td>Pareja de ejemplo 5</td><td>80</td></tr>
+</table></div>
+<p class="nota">Datos de ejemplo. Última actualización: pendiente.</p>
 </div></section>
 
 <section id="resenas" class="resenas"><div class="wrap">
@@ -173,10 +233,32 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 </div>
 </div></section>
 
+<section id="instagram"><div class="wrap">
+<h2>Síguenos en Instagram</h2>
+<!-- Para un feed automático, usa un widget externo (Behold, Elfsight...). Mientras, sustituye estas fotos -->
+<a class="ig3" href="https://www.instagram.com/belapadelcenter/" target="_blank" rel="noopener" aria-label="Abrir Instagram"><img src="img/ig1.jpg" alt="Publicación de Instagram" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><img src="img/ig2.jpg" alt="Publicación de Instagram" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"><img src="img/ig3.jpg" alt="Publicación de Instagram" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'"></a>
+<a class="btn" style="background:var(--noche);color:#fff" href="https://www.instagram.com/belapadelcenter/" target="_blank" rel="noopener">@belapadelcenter</a>
+</div></section>
+
+<section id="faq" class="faq resenas"><div class="wrap">
+<h2>Preguntas frecuentes</h2>
+<details><summary>¿Cómo puedo cancelar una reserva?</summary><p>Desde la app de Playtomic, hasta 4 horas antes del partido.</p></details>
+<details><summary>¿Se pueden alquilar palas?</summary><p>Sí, en recepción por 3 € la pala. Las pelotas se venden por 4 €.</p></details>
+<details><summary>¿Hay parking y vestuarios?</summary><p>Sí, parking gratuito y vestuarios con duchas y taquillas.</p></details>
+<details><summary>¿Puedo probar una clase antes de apuntarme?</summary><p>Sí, escríbenos por WhatsApp y te reservamos una clase de prueba.</p></details>
+<details><summary>¿Necesito ser socio para jugar?</summary><p>No, cualquiera puede reservar. Los socios tienen mejores precios.</p></details>
+<p class="nota">Respuestas de ejemplo: ajústalas a las normas reales del club.</p>
+</div></section>
+
+<section id="patrocinadores"><div class="wrap">
+<h2>Nos acompañan</h2>
+<div class="logos"><div>Logo patrocinador</div><div>Logo patrocinador</div><div>Logo patrocinador</div><div>Logo patrocinador</div></div>
+</div></section>
+
 <section id="contacto" class="contacto"><div class="wrap">
 <h2>Reserva tu pista</h2>
 <p>Calle Malagón, Puertollano (Ciudad Real)</p>
-<p>Abierto todos los días, de 9:00 a 23:00</p>
+<p>Horario: todos los días, de 9:00 a 23:00 <span id="estado" class="estado"></span></p>
 <p>Teléfono: 600 000 000</p>
 <div class="botones"><a class="btn" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista">Reservar por WhatsApp</a>
 <a class="btn sec" href="https://www.google.com/maps/search/?api=1&query=Calle+Malag%C3%B3n+Puertollano">Cómo llegar</a>
@@ -184,8 +266,16 @@ footer{padding:26px 0;text-align:center;font-size:.9rem;background:var(--noche);
 <iframe class="mapa" title="Mapa de Oasis Pádel Club" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Calle+Malag%C3%B3n,+Puertollano&output=embed"></iframe>
 </div></section>
 
-<footer>© 2026 Oasis Pádel Club <a href="https://www.instagram.com/belapadelcenter/" target="_blank" rel="noopener">Instagram</a></footer>
+<footer><div class="pie"><a href="#pistas">Pistas</a><a href="#reservar">Reservar</a><a href="#socios">Socios</a><a href="#clases">Clases</a><a href="#torneos">Torneos</a><a href="#ranking">Ranking</a><a href="#resenas">Reseñas</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a><a href="privacidad.html">Privacidad</a></div>© 2026 Oasis Pádel Club <a href="https://www.instagram.com/belapadelcenter/" target="_blank" rel="noopener">Instagram</a></footer>
+<a class="flota" href="https://wa.me/34600000000?text=Hola%2C%20quiero%20reservar%20pista" target="_blank" rel="noopener">WhatsApp</a>
+<div class="cookies" id="cookies" hidden>Esta web no usa cookies de seguimiento. <a href="privacidad.html" style="color:#fff">Más información</a><button id="okc">Entendido</button></div>
+<!-- Estadísticas sin cookies (GoatCounter): crea tu cuenta y descomenta con tu código
+<script data-goatcounter="https://TUCODIGO.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script> -->
 <script>
+(function(){var e=document.getElementById('estado');if(e){var h=+new Intl.DateTimeFormat('es-ES',{hour:'numeric',hour12:false,timeZone:'Europe/Madrid'}).format(new Date())%24;var a=h>=9&&h<23;e.className='estado '+(a?'si':'no');e.textContent=a?'Abierto ahora':'Cerrado ahora'}
+var c=document.getElementById('cookies'),v=false;try{v=localStorage.getItem('ok')}catch(x){}if(!v)c.hidden=false;
+document.getElementById('okc').onclick=function(){c.hidden=true;try{localStorage.setItem('ok','1')}catch(x){}}})();
+
 document.getElementById('inscripcion').addEventListener('submit',function(e){
 e.preventDefault();var f=new FormData(this);
 var t='Inscripción torneo Oasis (15-16 mayo 2027)\nJugador 1: '+f.get('j1')+'\nJugador 2: '+f.get('j2')+'\nTeléfono: '+f.get('tel')+'\nCategoría: '+f.get('cat')+'\nNivel: '+f.get('nivel');
